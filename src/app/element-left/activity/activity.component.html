@@ -1,0 +1,15 @@
+<div class="activity-row">
+  <div class="activity-desc">
+    <h5>{{item.name}}</h5>
+     <p>{{item.description}}</p>
+     <p>{{item.adress}}</p>
+    <h6>Tel:{{item.phone}}</h6>
+  </div>
+  <div class="activity-img">
+    <ul>
+    <li><img [src]='item.img'  alt=""/></li>
+    <li><img [src]='item.social_info.img'  alt=""/></li>
+    </ul>
+    </div>
+  <div class="clear"> </div>
+</div>

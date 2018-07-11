@@ -1,0 +1,20 @@
+<div class="element-left"  *ngIf="selectedItem">
+  <div class="element-bg-img"><img [src]="selectedItem.img" alt="" class="img-responsive"> </div>
+  <div class="element-left-bottom">
+    <div class="ele-strip">
+      <ul>
+        <li *ngFor="let type of types" (click)="filter(type.key)" [ngClass]="{'active':  type.key === currentType }"><a href="#">{{type.name}}</a></li>
+      </ul>
+    </div>
+    <div class="village">
+      <h3>Righteous indignation & like</h3>
+       <span class="line"> </span>
+         <div class="activity_box">
+            <div class="scrollbar" id="style-2">
+              <app-activity (click)="selectItem(item)" *ngFor="let item of dataSet | typeFilter:currentType; let i = index" [item]="item" ></app-activity>
+            </div>
+          </div>
+     </div>
+  </div>
+  <!-- <pre>{{dataSet | typeFilter:currentType | json}}</pre> -->
+</div>

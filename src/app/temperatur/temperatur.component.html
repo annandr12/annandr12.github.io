@@ -1,0 +1,7 @@
+<div class="temperatur" *ngIf="item">
+  <h5>{{item.weather.title}}</h5>
+  <span class="w-line"> </span>
+  <span [class]="item.weather.icon"> </span>
+  <h2>{{item.weather.temperature}}<sup class="degree">°</sup></h2>
+  <h6>Water {{item.weather.water}}<sup class="degree">°</sup></h6>
+</div>
